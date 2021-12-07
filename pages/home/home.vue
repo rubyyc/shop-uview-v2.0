@@ -1,5 +1,7 @@
 <template>
-  <view></view>
+  <view>
+    {{3000 | hotNumber}}
+  </view>
 </template>
 
 <script>
@@ -25,7 +27,8 @@ export default {
 
     }
 
-
+    // 测试自定义工具是否可用
+    uni.$u.utils.isLogin()
     console.log(1111);
   }
 }
