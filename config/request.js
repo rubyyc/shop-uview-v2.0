@@ -73,4 +73,15 @@ module.exports = (vm) => {
     }
     // return Promise.reject(response)
   })
+
+  // 增加patch
+  uni.$u.patch = (url, params = {},config = {}) => {
+    console.log('patch请求');
+    // 模拟patch
+    const _params = {
+      ...params,
+      _method: 'PATCH'
+    }
+    return uni.$u.http.post(url,_params,config)
+  }
 }
