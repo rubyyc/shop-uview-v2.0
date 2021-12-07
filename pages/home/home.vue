@@ -11,7 +11,8 @@ export default {
     };
   },
   async onLoad (options) {
-    console.log('onLoad');
+    console.log('onLoad',this.vuex_user.name);
+    
     // const res = await getIndex({ custom: { auth: false } })
     try {
       const res = await getIndex(1)
