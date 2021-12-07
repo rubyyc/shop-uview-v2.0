@@ -7,4 +7,7 @@ export const postIndex = (params, config = {}) => http.post('/api/auth/login', p
 
 
 // get请求，获取菜单，注意：get请求的配置等，都在第二个参数中，详见前面解释
-export const getIndex = (data) => http.get('/api/index', data)
+// 实际上每个api的data,params.config可以自由配置,具体看你的业务逻辑
+// export const getIndex = (params, config) => http.get('/api/goods' + uni.$u.queryParams(params), config)
+
+export const getIndex = id => http.get(`/api/goods/${id}`)

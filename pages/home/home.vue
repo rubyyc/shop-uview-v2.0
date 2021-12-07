@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { postIndex } from '@/config/api'
+import { getIndex } from '@/config/api'
 export default {
   data () {
     return {
@@ -14,12 +14,12 @@ export default {
     console.log('onLoad');
     // const res = await getIndex({ custom: { auth: false } })
     try {
-      // const res = await getIndex({ custom: { auth: false,catch: true } })
+      const res = await getIndex(1)
       // const res = await postIndex({}, { custom: { auth: false, toast: false, catch: true } })
-      // console.log('res', res);
-
-      const res = await uni.$u.patch('/api/orders/1/confirm',{name: 'Tom'})
       console.log('res', res);
+
+      // const res = await uni.$u.patch('/api/orders/1/confirm',{name: 'Tom'})
+      // console.log('res', res);
     } catch (error) {
 
     }
