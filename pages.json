@@ -6,7 +6,7 @@
     {
       "path": "pages/home/home",
       "style": {
-        "navigationBarTitleText": "",
+        "navigationBarTitleText": "首页",
         "enablePullDownRefresh": false
       }
     },
